@@ -1,0 +1,44 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="inline.GameOver"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/inline;component/Images/spaghetti.png" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Background="#9D000000">
+            <TextBlock FontSize="40" FontWeight="ExtraBlack" Foreground="White" Margin="0,0,0,0" Grid.RowSpan="2" TextAlignment="Center" TextWrapping="Wrap" FontStyle="Normal" FontStretch="Normal" Height="386" Name="GameOverText">
+          
+
+            </TextBlock>
+
+        </StackPanel>
+        <Button Content="Try again" 
+                Grid.Row="1" Height="142" 
+                HorizontalAlignment="Left"
+                Margin="75,122,0,0" Name="button1" 
+                VerticalAlignment="Top" Width="325"
+                Background="#A6007900" 
+                FontSize="40" FontWeight="ExtraBlack" 
+                Click="button1_Click" />
+    </Grid>
+   
+
+</phone:PhoneApplicationPage>
